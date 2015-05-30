@@ -78,7 +78,45 @@
           }
         ]
       }
+    },
+    {
+      "path": "data/fr-canton.tsv",
+      "schema": {
+		"fields": [
+          {
+            "name": "canton_id",
+            "title": "Canton Code",
+            "description": "The code for the canton",
+            "type": "string"
+          }, 
+          {
+            "name": "canton_name",
+            "title": "Region Name",
+            "description": "Name of the canton",
+            "type": "string"
+          }, 
+          {
+            "name": "type_article", 
+            "title": "Type of article",
+            "description": "The type of article to display before the name",
+            "type": "integer"
+          }, 
+          {
+            "name": "region",
+            "title": "Region",
+            "description": "Id of of the region where the canton lies",
+            "type": "string"
+          }
+          {
+            "name": "departement",
+            "title": "Departement",
+            "description": "Id of of the departement where the canton lies",
+            "type": "string"
+          }
+        ]
+      }
     }
+	
 	
   ]
 }

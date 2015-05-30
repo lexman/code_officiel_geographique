@@ -32,3 +32,19 @@ file://data/fr-regions.tsv <- file://reg2015.txt , file://data ! python
 			fout.write("\t".join(fields))
 			fout.write("\n")
 
+file://canton2015.txt <- http://www.insee.fr/fr/methodes/nomenclatures/cog/telechargement/2015/txt/canton2015.txt ! download
+
+file://data/fr-cantons.tsv <- file://canton2015.txt , file://data ! python
+	headers = ['canton_id', 'canton_name', 'type_article', 'region', 'departement']
+	with open('data/fr-cantons.tsv', 'w') as fout, \
+		 open('canton2015.txt') as fin :
+		fout.write("\t".join(headers))
+		fout.write("\n")
+		next(fin) # pass the header
+		for line in fin:
+			region, dep, canton, typct, burcentral, \
+				tncc, artmaj, ncc, artmin, nccenr = line.strip().split("\t")
+			fields = [canton, nccenr, tncc, region, dep]
+			fout.write("\t".join(fields))
+			fout.write("\n")
+			
