@@ -1,0 +1,28 @@
+region_id	region_name	type_article	chef_lieu
+01	Guadeloupe	3	97105
+02	Martinique	3	97209
+03	Guyane	3	97302
+04	La Réunion	0	97411
+06	Mayotte	0	97608
+11	Île-de-France	1	75056
+21	Champagne-Ardenne	0	51108
+22	Picardie	0	80021
+23	Haute-Normandie	0	76540
+24	Centre	2	45234
+25	Basse-Normandie	0	14118
+26	Bourgogne	0	21231
+31	Nord-Pas-de-Calais	2	59350
+41	Lorraine	0	57463
+42	Alsace	1	67482
+43	Franche-Comté	0	25056
+52	Pays de la Loire	4	44109
+53	Bretagne	0	35238
+54	Poitou-Charentes	2	86194
+72	Aquitaine	1	33063
+73	Midi-Pyrénées	0	31555
+74	Limousin	2	87085
+82	Rhône-Alpes	0	69123
+83	Auvergne	1	63113
+91	Languedoc-Roussillon	2	34172
+93	Provence-Alpes-Côte d'Azur	0	13055
+94	Corse	0	2A004
