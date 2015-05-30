@@ -1,0 +1,52 @@
+﻿{
+  "name": "fr-departements",
+  "title": "Departements",
+  "sources": [{
+    "name": "INSEE : Code Officiel Géographique",
+    "web": "http://www.insee.fr/fr/methodes/nomenclatures/cog/default.asp"
+  }],
+  "license": "",
+  "maintainers": [{
+    "name": "Lexman",
+    "web": "http://github.com/abonnasseau"
+  }],
+  "resources": [
+    {
+      "path": "data/fr-departements.tsv",
+      "schema": {
+        "fields": [
+          {
+            "name": "departement_id", 
+            "title": "Departement Code",
+            "description": "The 2 letters code for the departement",
+            "type": "string"
+          }, 
+          {
+            "name": "departement_name", 
+            "title": "Departement Name",
+            "description": "Name of the departement",
+            "type": "string"
+          }, 
+          {
+            "name": "type_article", 
+            "title": "Type of article",
+            "description": "The type of article to display before the name",
+            "type": "integer"
+          }, 
+          {
+            "name": "region", 
+            "title": "Region",
+            "description": "Id of the region the departement belongs to",
+            "type": "integer"
+          }, 
+          {
+            "name": "chef_lieu", 
+            "title": "Chef Lieu",
+            "description": "Id of the principal administrative city",
+            "type": "integer"
+          }, 
+        ]
+      }
+    }
+  ],
+}
