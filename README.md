@@ -20,4 +20,7 @@ This projects includes a tuttlefile that builds the data. To run the `tuttlefile
 
 	tuttle run
 
+# To do
+[ ] imrove articles : http://www.insee.fr/fr/methodes/nomenclatures/cog/documentation.asp?page=telechargement/2015/doc/doc_variables.htm#tncc
+[ ] explicit foreign keys
 
