@@ -47,4 +47,23 @@ file://data/fr-cantons.tsv <- file://canton2015.txt , file://data ! python
 			fields = [canton, nccenr, tncc, region, dep]
 			fout.write("\t".join(fields))
 			fout.write("\n")
-			
+
+file://comsimp2015.zip <- http://www.insee.fr/fr/methodes/nomenclatures/cog/telechargement/2015/txt/comsimp2015.zip ! download
+
+file://comsimp2015.txt <- file://comsimp2015.zip
+	unzip comsimp2015.zip comsimp2015.txt
+
+file://data/fr-communes.tsv <- file://comsimp2015.txt , file://data ! python
+	headers = ['code_insee', 'town_name', 'type_article', 'region', 'departement']
+	with open('data/fr-communes.tsv', 'w') as fout, \
+		 open('comsimp2015.txt') as fin :
+		fout.write("\t".join(headers))
+		fout.write("\n")
+		next(fin) # pass the header
+		for line in fin:
+			cdc, cheflieu, reg, dep, com, ar, ct, tncc, \
+				artmaj, ncc, artmin, nccenr = line.rstrip().split("\t")
+			code_insee = "{}{}".format(dep, com)
+			fields = [code_insee, nccenr, tncc, reg, dep]
+			fout.write("\t".join(fields))
+			fout.write("\n")

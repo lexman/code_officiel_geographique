@@ -80,7 +80,7 @@
       }
     },
     {
-      "path": "data/fr-canton.tsv",
+      "path": "data/fr-cantons.tsv",
       "schema": {
 		"fields": [
           {
@@ -91,7 +91,7 @@
           }, 
           {
             "name": "canton_name",
-            "title": "Region Name",
+            "title": "Canton Name",
             "description": "Name of the canton",
             "type": "string"
           }, 
@@ -106,7 +106,7 @@
             "title": "Region",
             "description": "Id of of the region where the canton lies",
             "type": "string"
-          }
+          },
           {
             "name": "departement",
             "title": "Departement",
@@ -115,8 +115,43 @@
           }
         ]
       }
+    },
+    {
+      "path": "data/fr-communes.tsv",
+      "schema": {
+		"fields": [
+          {
+            "name": "code_insee",
+            "title": "Code INSEE",
+            "description": "The id for the commune, given by the INSEE commonly known as code INSEE",
+            "type": "string"
+          }, 
+          {
+            "name": "town_name",
+            "title": "Town Name",
+            "description": "Name of the town",
+            "type": "string"
+          }, 
+          {
+            "name": "type_article", 
+            "title": "Type of article",
+            "description": "The type of article to display before the name",
+            "type": "integer"
+          }, 
+          {
+            "name": "region",
+            "title": "Region",
+            "description": "Id of of the region where the town lies",
+            "type": "string"
+          },
+          {
+            "name": "departement",
+            "title": "Departement",
+            "description": "Id of of the departement where the town lies",
+            "type": "string"
+          }
+        ]
+      }
     }
-	
-	
   ]
 }
