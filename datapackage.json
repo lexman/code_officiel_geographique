@@ -65,10 +65,15 @@
             "type": "string"
           }, 
           {
-            "name": "type_article", 
-            "title": "Type of article",
-            "description": "The type of article to display before the name",
-            "type": "integer"
+            "name": "article", 
+            "title": "Article",
+            "description": "Article to display before the name",
+            "type": "string"
+          }, 
+            "name": "charniere", 
+            "title": "Charniere",
+            "description": "The article to display when using gerondive",
+            "type": "string"
           }, 
           {
             "name": "chef_lieu", 

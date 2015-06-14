@@ -19,8 +19,14 @@ file://data/fr-departements.tsv <- file://depts2015.txt , file://data ! python
 			
 file://reg2015.txt <- http://www.insee.fr/fr/methodes/nomenclatures/cog/telechargement/2015/txt/reg2015.txt ! download
 
-file://data/fr-regions.tsv <- file://reg2015.txt , file://data ! python
-	headers = ['region_id', 'region_name', 'type_article', 'chef_lieu']
+file://data/fr-regions.tsv <- file://reg2015.txt , file://data , file://articles.tsv ! python
+	articles = {}
+	with open('articles.tsv') as farticles:
+		for line in farticles:
+			code, article, charniere = line.strip().split("\t")
+			articles[code] = { 'article' : article, 'charniere' : charniere} 
+	
+	headers = ['region_id', 'region_name', 'article', 'charniere', 'chef_lieu']
 	with open('data/fr-regions.tsv', 'w') as fout, \
 		 open('reg2015.txt') as fin :
 		fout.write("\t".join(headers))
@@ -28,7 +34,7 @@ file://data/fr-regions.tsv <- file://reg2015.txt , file://data ! python
 		next(fin) # pass the header
 		for line in fin:
 			region, cheflieu, tncc, ncc, nccenr = line.strip().split("\t")
-			fields = [region, nccenr, tncc, cheflieu]
+			fields = [region, nccenr, articles[tncc]['article'], articles[tncc]['charniere'], cheflieu]
 			fout.write("\t".join(fields))
 			fout.write("\n")
 
