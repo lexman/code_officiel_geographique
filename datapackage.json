@@ -33,6 +33,7 @@
             "description": "Article to display before the name",
             "type": "string"
           }, 
+		  {
             "name": "charniere", 
             "title": "Charniere",
             "description": "The article to display when using possessive",
@@ -75,6 +76,7 @@
             "description": "Article to display before the name",
             "type": "string"
           }, 
+		  {
             "name": "charniere", 
             "title": "Charniere",
             "description": "The article to display when using possessive",
