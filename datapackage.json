@@ -1,8 +1,8 @@
 ﻿{
   "name": "fr-code-officiel-geographique",
-  "title": "Code officiel géographique",
+  "title": "Code officiel geographique",
   "sources": [{
-    "name": "INSEE : Code Officiel Géographique",
+    "name": "INSEE : Code Officiel Geographique",
     "web": "http://www.insee.fr/fr/methodes/nomenclatures/cog/default.asp"
   }],
   "license": "",
