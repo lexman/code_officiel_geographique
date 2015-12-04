@@ -1,15 +1,17 @@
 
-The french Official Geographic Code (*Code Officiel Geographique*) is updated every year by [INSEE](http://www.insee.fr/), 
-the french nationnal statistics office. 
+The French Official Geographic Code (*Code Officiel Geographique*) is updated every year by [INSEE](http://www.insee.fr/), 
+the French national statistics office. 
 
-It is the french nationnal reference which list cities as well as every admistrative area.
+This is the French national reference which list cities as well as every administrative area.
 
 http://www.insee.fr/fr/methodes/nomenclatures/cog/default.asp
 
 # Licence
 
 ## Data
-Unknown
+Even though licence is not explicitly stated on INSEE's web site, these files are national references to be used by every one. Therefore they fall 
+in French's public domain's equivalent.
+
 
 ## Scripts
 MIT
@@ -22,6 +24,6 @@ This projects includes a tuttlefile that builds the data. To run the `tuttlefile
 
 # To do
 
-- [ ] imrove articles : http://www.insee.fr/fr/methodes/nomenclatures/cog/documentation.asp?page=telechargement/2015/doc/doc_variables.htm#tncc
+- [ ] improve articles : http://www.insee.fr/fr/methodes/nomenclatures/cog/documentation.asp?page=telechargement/2015/doc/doc_variables.htm#tncc
 - [ ] explicit foreign keys
 
