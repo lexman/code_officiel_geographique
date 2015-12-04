@@ -13,7 +13,7 @@
   "resources": [
     {
       "path": "data/fr-departements.tsv",
-      dialect: { 
+      "dialect": { 
         "delimiter": "\t"
       },
       "schema": {
@@ -59,7 +59,7 @@
     },
     {
       "path": "data/fr-regions.tsv",
-      dialect: { 
+      "dialect": { 
         "delimiter": "\t"
       },
       "schema": {
@@ -99,7 +99,7 @@
     },
     {
       "path": "data/fr-cantons.tsv",
-      dialect: { 
+      "dialect": { 
         "delimiter": "\t"
       },
       "schema": {
@@ -139,7 +139,7 @@
     },
     {
       "path": "data/fr-communes.tsv",
-      dialect: { 
+      "dialect": { 
         "delimiter": "\t"
       },
       "schema": {
