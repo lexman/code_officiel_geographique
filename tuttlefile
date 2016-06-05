@@ -3,7 +3,7 @@ file://data <-
 
 file://depts2015.txt <- http://www.insee.fr/fr/methodes/nomenclatures/cog/telechargement/2015/txt/depts2015.txt ! download
 
-file://data/fr-departements.tsv <- file://depts2015.txt , file://data , file://articles.tsv  ! python
+file://data/fr-departements.tsv <- file://depts2015.txt file://data file://articles.tsv  ! python
 	articles = {}
 	with open('articles.tsv') as farticles:
 		for line in farticles:
@@ -24,7 +24,7 @@ file://data/fr-departements.tsv <- file://depts2015.txt , file://data , file://a
 			
 file://reg2015.txt <- http://www.insee.fr/fr/methodes/nomenclatures/cog/telechargement/2015/txt/reg2015.txt ! download
 
-file://data/fr-regions.tsv <- file://reg2015.txt , file://data , file://articles.tsv ! python
+file://data/fr-regions.tsv <- file://reg2015.txt file://data file://articles.tsv ! python
 	articles = {}
 	with open('articles.tsv') as farticles:
 		for line in farticles:
@@ -44,7 +44,7 @@ file://data/fr-regions.tsv <- file://reg2015.txt , file://data , file://articles
 
 file://canton2015.txt <- http://www.insee.fr/fr/methodes/nomenclatures/cog/telechargement/2015/txt/canton2015.txt ! download
 
-file://data/fr-cantons.tsv <- file://canton2015.txt , file://data ! python
+file://data/fr-cantons.tsv <- file://canton2015.txt file://data ! python
 	headers = ['canton_id', 'canton_name', 'type_article', 'region', 'departement']
 	with open('data/fr-cantons.tsv', 'w') as fout, \
 		 open('canton2015.txt') as fin :
@@ -63,7 +63,7 @@ file://comsimp2015.zip <- http://www.insee.fr/fr/methodes/nomenclatures/cog/tele
 file://comsimp2015.txt <- file://comsimp2015.zip
 	unzip comsimp2015.zip comsimp2015.txt
 
-file://data/fr-communes.tsv <- file://comsimp2015.txt , file://data ! python
+file://data/fr-communes.tsv <- file://comsimp2015.txt file://data ! python
 	headers = ['code_insee', 'town_name', 'type_article', 'region', 'departement']
 	with open('data/fr-communes.tsv', 'w') as fout, \
 		 open('comsimp2015.txt') as fin :
